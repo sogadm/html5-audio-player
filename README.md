@@ -4,7 +4,7 @@ Forked from <https://github.com/justinmc/react-audio-player>
 
 > Modified to fetch music file list in nginx directory and support playing<br />Full-screen adaptive mobile computer playlist
 
-## [Demo](https://sogadm.github.io/html5-audio-player/)
+## [Demo](https://github.com/likev/html5-audio-player)
 
 ## Screenshot
 
@@ -80,7 +80,7 @@ fetch('http//localhost/music/')/*Replace http//localhost/music/ with your music 
 
 # html5-audio-player
 
-从<https://github.com/justinmc/react-audio-player>分叉而来
+从<https://github.com/likev/html5-audio-player>分叉而来
 
 > 已修改为获取nginx目录下音乐文件列表，并支持播放<br />列表为全屏自适应手机电脑
 
