@@ -27,13 +27,13 @@
 // test image for web notifications
 var iconImage = null;
 
-fetch('http//localhost/music/')/*将http//localhost/music/换成你的音乐网站目录*/
+fetch('https://n.sog.cc:2200/Music/')/*将http//localhost/music/换成你的音乐网站目录*/
   .then(response => response.json())
   .then(data => {
     const playList = data.map(item => ({
       icon: iconImage,
       title: item.name.split('.')[0],
-      file: `http//localhost/music/${item.name}`/*将http//localhost/music/换成你的音乐网站目录*/
+      file: `https://n.sog.cc:2200/Music/${item.name}`/*将http//localhost/music/换成你的音乐网站目录*/
     }));
     
     AP.init({
