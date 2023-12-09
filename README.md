@@ -4,7 +4,7 @@ Forked from <https://github.com/likev/html5-audio-player>
 
 > Modified to fetch music file list in nginx directory and support playing<br />Full-screen adaptive mobile computer playlist
 
-## [Demo](https://github.com/likev/html5-audio-player)
+## [Demo](https://sogadm.github.io/html5-audio-player/)
 
 ## Screenshot
 
