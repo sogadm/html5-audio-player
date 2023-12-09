@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>Audio player HTML5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./AudioPlayer.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+
+    #player{
+        max-width: 700px;
+        height: 500px;
+        border: solid 1px gray;
+    }
+    </style>
+  </head>
+
+  <body>
+      <!-- Audio player container-->
+     <div id='player'></div>
+
+    <!-- Audio player js begin-->
+    <script src="./AudioPlayer.js"></script>
+
+    <script>
+// test image for web notifications
+var iconImage = null;
+
+fetch('http//localhost/music/')/*将http//localhost/music/换成你的音乐网站目录*/
+  .then(response => response.json())
+  .then(data => {
+    const playList = data.map(item => ({
+      icon: iconImage,
+      title: item.name.split('.')[0],
+      file: `http//localhost/music/${item.name}`/*将http//localhost/music/换成你的音乐网站目录*/
+    }));
+    
+    AP.init({
+        container:'#player',//a string containing one CSS selector
+        volume   : 1,
+        autoPlay : false,
+        notification: false,
+        playList
+    });
+  })
+  .catch(error => console.error('Error:', error));
+    </script>
+    <!-- Audio player js end-->
+
+  </body>
+</html>
